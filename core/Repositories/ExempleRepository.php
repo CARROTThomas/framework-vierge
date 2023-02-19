@@ -3,13 +3,13 @@
 namespace Repositories;
 
 use Attributes\TargetEntity;
-use Entity\Film;
+use Entity\Exemple;
 
-#[TargetEntity(entityName: Film::class)]
-class FilmRepository extends AbstractRepository
+#[TargetEntity(entityName: Exemple::class)]
+class exempleRepository extends AbstractRepository
 {
 
-    public function insert(Film $film){
+    public function insert(Exemple $film){
 
         $query = $this->pdo->prepare("INSERT INTO {$this->tableName} SET title = :title, synopsis = :synopsis, image=:image ");
 

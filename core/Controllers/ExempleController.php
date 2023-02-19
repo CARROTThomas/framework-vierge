@@ -6,10 +6,10 @@ use App\File;
 use Attributes\DefaultEntity;
 use Attributes\UsesEntity;
 use Entity\Avis;
-use Entity\Film;
+use Entity\Exemple;
 
-#[DefaultEntity(entityName: Film::class)]
-class FilmController extends AbstractController
+#[DefaultEntity(entityName: Exemple::class)]
+class ExempleController extends AbstractController
 {
 
 
@@ -80,7 +80,7 @@ class FilmController extends AbstractController
                 $image->upload();
             }
 
-            $film = new Film();
+            $film = new Exemple();
             $film->setTitle($title);
             $film->setSynopsis($synopsis);
             $film->setImage($image->getName());

@@ -4,12 +4,12 @@ namespace Entity;
 
 use Attributes\Table;
 use Attributes\TargetRepository;
-use Repositories\FilmRepository;
+use Repositories\exempleRepository;
 use Repositories\UserRepository;
 
 #[Table(name: "films")]
-#[TargetRepository(repositoryName: FilmRepository::class)]
-class Film extends AbstractEntity
+#[TargetRepository(repositoryName: exempleRepository::class)]
+class Exemple extends AbstractEntity
 {
     private int $id;
     private string $title;

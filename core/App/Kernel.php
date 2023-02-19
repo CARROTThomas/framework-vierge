@@ -4,16 +4,9 @@ namespace App;
 
 class Kernel
 {
-
-    public static function run(){
-
-        \App\Session::start();
-
-
-        $type = "film";
+    public static function run() {
+        $type = "home";
         $action = "index";
-
-
 
         if(!empty($_GET['type'])){ $type = $_GET['type']; };
         if(!empty($_GET['action'])){ $action = $_GET['action']; };
@@ -25,10 +18,6 @@ class Kernel
         $controller = new $controllerName();
 
         $controller->$action();
-
-
-
-
     }
 
 }

@@ -4,6 +4,5 @@ spl_autoload_register(
         $className = str_replace("\\", "/", $className);
 
         require_once "core/{$className}.php";
-
     }
 );
